@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
@@ -15,6 +16,32 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "sass": "^1.71.1",
+=======
+<<<<<<< HEAD
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+=======
+    "bootstrap": "^5.3.3",
+>>>>>>> b9ed900e08d8e8f8be7c76f3d2787d2c276b7523
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
+    "react-bootstrap-icons": "^1.11.3",
+    "react-dom": "^18.2.0",
+<<<<<<< HEAD
+    "react-hook-form": "^7.51.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "saas": "^1.0.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+=======
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "sass": "^1.71.1",
+>>>>>>> b9ed900e08d8e8f8be7c76f3d2787d2c276b7523
+    "scss": "^0.2.4",
+>>>>>>> aa9a89d85020cb8229ed4231e9257ad24dd07cb0
     "web-vitals": "^2.1.4"
   },
   "scripts": {

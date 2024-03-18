@@ -1,0 +1,24 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.template{
+    background-color: rgb(217, 207, 228);
+}
+.form_container{
+    width: 33%;
+    
+}
+label{
+    color: black;
+    font-weight: 500;
+}
+input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+@media screen and (max-width:1000px){
+    .form_container{
+        width: 90%;
+    }
+}
