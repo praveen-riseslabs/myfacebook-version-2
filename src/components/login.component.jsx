@@ -39,13 +39,13 @@ export function Login(){
                                   <label class="form-check-label" for="rememberMe">Keep me signed in</label>
                               </div>
                                 <div class="text-right mt-3  p-5  col-6">
-                                  <Link to="#">Forgot password?</Link>
+                                  <Link to="/">Forgot password?</Link>
                                 </div>
                               
                               </div>
                               
                               <div class="text-center ">
-                                  Don't have an account? <Link to="#">Create one</Link>
+                                  Don't have an account? <Link to="/signup">Create one</Link>
                               </div>
                           </form>
                       </div>
