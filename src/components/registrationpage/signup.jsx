@@ -3,6 +3,7 @@ import axios from "axios";
 import { useForm } from 'react-hook-form';
 import React, { useState } from 'react';
 import '../registrationpage/signup.scss';
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { PersonFill, EnvelopeFill, LockFill, TelephoneFill, PersonCircle } from 'react-bootstrap-icons';
 
@@ -15,6 +16,7 @@ export function Signup() {
   const [phonenumber, setPhonenumber] = useState('');
   const [password, setPassword] = useState('');
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const Navigate = useNavigate();
   
   const onSubmit=()=> {
     const data = {
@@ -36,6 +38,7 @@ export function Signup() {
         console.log("error", e);
 
     }
+    Navigate('/login')
 
 };
   return (
@@ -76,7 +79,7 @@ export function Signup() {
               {...register('email', {
                 required: 'Email is required',
                 pattern: {
-                  value: /^[a-zA-Z0-9._%+-]+@%.com$/,
+                  value: /^[a-zA-Z0-9._%+-]+@gmail.com$/,
                   message: 'Invalid Gmail address format'
                 }
               })} onChange={e => setEmail(e.target.value)}></input>
@@ -122,11 +125,10 @@ export function Signup() {
             <button className='btn btn-primary'>Signup</button>
           </div>
           <p className='text-end mt-2'>
-            Already Registered <Link to="/" className="ms-2"> SignIn</Link>
+            Already Registered <Link to="/login" className="ms-2"> SignIn</Link>
           </p>
         </form>
       </div>
-
     </div>
   )
 }

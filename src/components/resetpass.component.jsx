@@ -57,7 +57,7 @@ export function Resetpassword(){
                                    <button type="button" class="btn btn-primary btn-block"value="submit" onClick={()=>saveData()} >Submit</button>
                               </div>
                               <div className="mt-3">
-                              <Link to="#">Login?</Link>
+                              <Link to="/login">Login?</Link>
 
                               </div>
 

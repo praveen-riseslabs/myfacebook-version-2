@@ -2,7 +2,7 @@
 
 
 
-export function reports(){
+export function Reports(){
     return(
         <div>
             Reports
