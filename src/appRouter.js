@@ -12,9 +12,19 @@ import {Charts} from './components/Pages/charts/charts.jsx';
 import {Icons} from './components/Pages/icons/icons.jsx';
 import {Userpages} from './components/Pages/userpages/userpages.jsx';
 import {Errorpages} from './components/Pages/errorpages/errorpages.jsx'
+import { Route, Routes} from 'react-router-dom';
+import { Login } from './components/login.component';
+import Sidebar from './components/sidebar';
+import  Dashboard from './components/dashboard.component'
+import About from './components/about';
+import Comment from './components/comment';
+import Product from './components/product';
+import ProductList from './components/productlist';
+import Analytics from './components/analytics';
 
 export function AppRouter(){
     return(
+        <Sidebar>
         <Routes>
             <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
             <Route path='/documents'element={<Documents></Documents>}></Route>
@@ -28,6 +38,14 @@ export function AppRouter(){
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path="/forgotpass" element={<Forgotpassword></Forgotpassword>}></Route>
             <Route path="/resetpass" element={<Resetpassword></Resetpassword>}></Route> 
+            <Route path='/' element={<Dashboard></Dashboard>}></Route>
+            <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+            <Route path='/about' element={<About></About>}></Route>
+            <Route path='/comment' element={<Comment></Comment>}></Route>
+            <Route path='/product' element={<Product></Product>}></Route>
+            <Route path='/productlist' element={<ProductList></ProductList>}></Route>
+            <Route path='/analytics' element={<Analytics></Analytics>}></Route>
         </Routes>
+        </Sidebar>
     )
 }
