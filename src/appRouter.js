@@ -45,12 +45,16 @@ export function AppRouter(){
             <Route path='/tables' element={<Tables></Tables>}></Route>
             <Route path='/charts' element={<Charts></Charts>}></Route>
             <Route path='/icons'element={<Icons></Icons>}></Route>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             <Route path='/userpages' element={<Userpages></Userpages>}></Route>
                   */}
 =======
             <Route path='/userpages' element={<Userpages></Userpages>}></Route>        */}
 >>>>>>> Stashed changes
+=======
+            <Route path='/userpages' element={<Userpages></Userpages>}></Route> */}
+>>>>>>> 57777a6 (added files)
         </Routes>
         
     )
