@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom'
 import './forgotpass.component.scss'
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Forgotpassword() {
 
@@ -22,7 +24,7 @@ export function Forgotpassword() {
             url: "http://ec2-3-109-214-63.ap-south-1.compute.amazonaws.com:4000/api/v1/forgot/password ",
             data: obj
         }).then(() => {
-            alert("check your email");
+            toast.success("check your email");
         })
 
         Navigate('/resetpass')

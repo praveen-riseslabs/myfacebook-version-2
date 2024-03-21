@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useForm } from 'react-hook-form';
 import React, { useState } from 'react';
@@ -9,6 +8,9 @@ import { PersonFill, EnvelopeFill, LockFill, TelephoneFill, PersonCircle } from 
 
 
 export function Signup() {
+
+  const {toast} = require('react-toastify');
+  require('react-toastify/dist/ReactToastify.css');
 
   const [firstname, setFirstName] = useState('');
   const [lastname, setLastName] = useState('');
@@ -32,7 +34,7 @@ export function Signup() {
             url: 'http://ec2-3-109-214-63.ap-south-1.compute.amazonaws.com:4000/api/v1/create',
             data: data
         }).then(() => {
-            alert("data saved successfully.....")
+            toast.success("data saved successfully.....")
         });
     } catch (e) {
         console.log("error", e);

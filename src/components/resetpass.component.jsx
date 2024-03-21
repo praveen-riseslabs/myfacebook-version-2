@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './resetpass.component.scss'
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Resetpassword(){
     const Navigate=useNavigate();
@@ -24,7 +26,7 @@ export function Resetpassword(){
             url:"http://ec2-3-109-214-63.ap-south-1.compute.amazonaws.com:4000/api/v1/reset/password ",
             data:obj
         }).then(()=>{
-            alert("successfully changed password")
+            toast.success("successfully changed password")
         })
         Navigate('/login')
     }
@@ -56,11 +58,6 @@ export function Resetpassword(){
                               <div class="d-grid gap-2 mt-3">
                                    <button type="button" class="btn btn-primary btn-block"value="submit" onClick={()=>saveData()} >Submit</button>
                               </div>
-                              <div className="mt-3">
-                              <Link to="/login">Login?</Link>
-
-                              </div>
-
                       </div>
                   </div>
               </div>
