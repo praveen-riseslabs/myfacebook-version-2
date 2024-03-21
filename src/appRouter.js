@@ -1,9 +1,10 @@
 
+
 import { Routes, Route } from 'react-router-dom';
-import { Login } from './components/login.component';
-import { Resetpassword } from './components/resetpass.component';
-import { Forgotpassword } from './components/forgotpass.component';
-import { Signup } from './components/registrationpage/signup';
+import { Login } from '../src/components/Login/login.component';
+import { Forgotpassword} from '../src/components/forgotpassword/forgotpass.component';
+import { Resetpassword } from '../src/components/Resetpassword/resetpass.component';
+import { Signup } from '../src/components/registrationpage/signup';
 import FileUploader from './components/Awss3Buckets/fileuploader';
 
 export function AppRouter(){
