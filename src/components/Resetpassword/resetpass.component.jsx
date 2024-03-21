@@ -12,6 +12,8 @@ export function Resetpassword(){
     const[otp,setOtp]=useState();
     const[password,setPassword]=useState();
     const[confirmpasword,setConfirmpassword]=useState();
+    const { toast } = require('react-toastify');
+  require('react-toastify/dist/ReactToastify.css');
 
     function saveData(){
         const obj={
@@ -24,7 +26,7 @@ export function Resetpassword(){
             url:"http://ec2-3-109-214-63.ap-south-1.compute.amazonaws.com:4000/api/v1/reset/password ",
             data:obj
         }).then(()=>{
-            alert("successfully changed password")
+            toast.success("successfully changed password")
         })
         Navigate('/login')
     }

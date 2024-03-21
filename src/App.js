@@ -1,39 +1,67 @@
 
 import './App.css';
-// import { AppRouter } from './appRouter';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import "../src/styles/main.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
-import Documents from "./pages/documents";
-import Uielements from "./pages/uielements";
-import Formelements from "./pages/formelements";
-import Charts from "./pages/charts";
-import Tables from "./pages/tables";
-import Icons from "./pages/icons";
-import Userpages from "./pages/userpages";
-import Errorpages from "./pages/errorpages";
-import Sidebar from "./components/sidebar";
+<<<<<<< Updated upstream
+import Home from './components/Home/home.jsx';
+// import { Signup } from './components/registrationpage/signup';
+ import { Login } from './components/Login/login.component.jsx';
+import { AppRouter } from './appRouter.js';
+// import S3Uploader from './components/Awss3bucket/uploadfiles.js';
+import Aws from './components/Awss3bucket/uploadfiles.js'
+import { HomeRouter } from './homerouter.js';
+// import { ToastContainer,toast } from 'react-toastify';
+
 
 function App() {
-    return (
-        <Router>
-            <div className="App">
-                <Sidebar />
-                <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/documents" element={<Documents />} />
-                    <Route path="/uielements" element={<Uielements />} />
-                    <Route path="/formelements" element={<Formelements />} />
-                    <Route path="/charts" element={<Charts />} />
-                    <Route path="/tables" element={<Tables />} />
-                    <Route path="/icons" element={<Icons/>}/>
-                    <Route path="/users" element={<Userpages />} />
-                    <Route path="/error" element={<Errorpages />} />
-                </Routes>
-            </div>
-        </Router>
-    );
+  const { ToastContainer} = require('react-toastify');
+require('react-toastify/dist/ReactToastify.css');
+  
+  return (
+    
+    <BrowserRouter>
+     {/* <Aws></Aws>  */}
+    {/* <S3Uploader></S3Uploader> */}
+         {/* <Home></Home>    */}
+       {/* <Login></Login>    */}
+      {/* <Signup/> */}
+        <AppRouter>
+        {/* <Home></Home>    */}
+        </AppRouter>  
+      <ToastContainer theme='dark'></ToastContainer>
+=======
+
+//  import Navbar from './components/Navbar/navbar';
+
+ import {AppRouter } from './appRouter';
+// import {Dashboard } from './components/dashboard.component';
+ import { Login } from './components/login.component';
+ import { Signup } from './components/registrationpage/signup';
+import Home from './components/Home/home';
+
+// import { Registration} from './components/registrationpage/signup'
+
+
+function App() {
+  
+  const { toast } = require('react-toastify');
+  require('react-toastify/dist/ReactToastify.css');
+  return (
+
+    <BrowserRouter>
+   
+  <Home></Home>
+    
+    <AppRouter> 
+    </AppRouter>
+     Toast
+</BrowserRouter>
+  )
+>>>>>>> Stashed changes
+
+    </BrowserRouter>
+  )
 }
 
 export default App;
@@ -41,18 +69,5 @@ export default App;
 
 
 
-// //import logo from './logo.svg';
-// import './App.css';
-// import { BrowserRouter } from 'react-router-dom';
-// import {AppRouter } from './appRouter';
-// //import {Dashboard } from './components/dashboard.component';
-// function App() {
-//   return (
-//     <BrowserRouter>
-//     {/* <Dashboard></Dashboard> */}
-//     <AppRouter></AppRouter>
-//     </BrowserRouter>
-//   );
-// }
 
-// export default App;
+

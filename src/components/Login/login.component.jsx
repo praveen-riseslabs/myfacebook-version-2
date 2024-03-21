@@ -2,13 +2,18 @@ import {Link} from 'react-router-dom';
 import './login.scss';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom'
+
 import axios from 'axios';
 export function Login(){
 
     const [email, setEmail]=useState();
     const [password, setPassword]= useState();
-    
-    const { register, formState: { errors } } = useForm();
+    const Navigate = useNavigate();
+
+    const { toast } = require('react-toastify');
+    require('react-toastify/dist/ReactToastify.css');
+    const { register,handleSubmit, formState: { errors } } = useForm();
 
     function saveData(){
         const data={
@@ -21,10 +26,13 @@ export function Login(){
             data:data,
         }).then((res)=>{
             if(res.status==200){
-                alert("login successfull")
+                toast.success("login successfull")
             localStorage.setItem("userinfo",JSON.stringify(res.data));
+            Navigate('/home');
+
+            
             }else{
-                alert("login failed")
+                toast.success("login failed")
             }
 
         })
@@ -72,7 +80,7 @@ export function Login(){
                               </div>
                               
                               <div class="d-grid gap-2 mt-3">
-                                   <button type="button" class="btn btn-danger btn-block" onClick={()=>saveData()} >SIGN IN</button>
+                                   <button type="button" class="btn btn-danger btn-block"  onClick={()=>saveData()} >SIGN IN</button>
                               </div>
 
                               <div class="row">

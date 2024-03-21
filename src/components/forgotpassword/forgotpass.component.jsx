@@ -11,7 +11,8 @@ export function Forgotpassword() {
     const [email, setEmail] = useState();
 
     const { register, formState: { errors } } = useForm();
-
+    const { toast } = require('react-toastify');
+    require('react-toastify/dist/ReactToastify.css');
 
     function saveData() {
         const obj = {
@@ -22,7 +23,7 @@ export function Forgotpassword() {
             url: "http://ec2-3-109-214-63.ap-south-1.compute.amazonaws.com:4000/api/v1/forgot/password ",
             data: obj
         }).then(() => {
-            alert("check your email");
+            toast.success("check your email");
         })
 
         Navigate('/resetpass')
