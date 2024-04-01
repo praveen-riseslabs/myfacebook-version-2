@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import PhoneNumber  from 'libphonenumber-js';
 
 
 export function Signup() {
@@ -15,9 +16,14 @@ export function Signup() {
   const [lastname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhonenumber] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('');  
   const { register, handleSubmit, formState: { errors } } = useForm();
+  
+
   const Navigate = useNavigate();
+
+  const { toast } = require('react-toastify');
+  require('react-toastify/dist/ReactToastify.css');
 
   const onSubmit = () => {
     const data = {
@@ -42,6 +48,17 @@ export function Signup() {
     Navigate('/login')
 
   };
+  const validatePhoneNumber = (value) => {
+    try {
+      const phoneNumber = PhoneNumber(value, 'IN');
+      if (!phoneNumber.isValid()) {
+        throw new Error('Invalid phone number');
+      }
+    } catch (error) {
+      return 'Invalid phone number';
+    }
+  };
+
   return (
     <div className='signup template d-flex justify-content-center align-items-center vh-130 '>
       <div className='form_container p-5 mt-3 rounded bg-white'>
@@ -91,17 +108,17 @@ export function Signup() {
             {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
           </div>
           <div className='mb-2'>
-            <label htmlFor='phonenumber'><label style={{ color: "gray", fontWeight: "bold" }} ></label>Phonenumber</label>
-            <input type='text' placeholder='Enter your phonenumber' id="phonenumber" className='form-control'
+          <label htmlFor='phonenumber'><label style={{ color: "gray", fontWeight: "bold" }} ></label>Phonenumber</label>
+            <input type='tel' placeholder='Enter your phonenumber' id="phonenumber" className='form-control'
               {...register('phonenumber', {
                 required: 'Phone number is required',
+                validate: validatePhoneNumber,
                 pattern: {
-                  value: /^\d{10}$/,
+                  // value: /^\d{10}$/,
                   message: 'Phone number must contain exactly 10 numbers'
                 }
               })} onChange={e => setPhonenumber(e.target.value)} ></input>
             {errors.phonenumber && <p style={{ color: 'red' }}>{errors.phonenumber.message}</p>}
-
           </div>
           <div className='mb-2'>
             <label htmlFor='password'><label style={{ color: "gray", fontWeight: "bold" }} ></label>password</label>

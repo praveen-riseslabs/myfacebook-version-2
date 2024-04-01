@@ -10,36 +10,34 @@ const  Sidebar = ({ isExpanded }) =>{
           <ul>
             <li>
               <WindowDesktop className="icon" />
-              <span><Link to="/dashboard" style={{ textDecoration: "none", color: 'white' }}>Dashboard</Link></span>
+              <span><Link to="/home/dashboard" style={{ textDecoration: "none", color: 'white' }}>Dashboard</Link></span>
 
             </li>
 
             <li>
               <FileEarmark className="icon" />
-              <span><Link to="/documents" style={{ textDecoration: "none", color: 'white' }}>Documents</Link></span>
+              <span><Link to="/home/documents" style={{ textDecoration: "none", color: 'white' }}>Documents</Link></span>
             </li>
-
-            <Link to="/documents" style={{ textDecoration: "none" }}>
               <li>
                 <FloppyFill className="icon" />
-                <span><Link to="/reports" style={{ textDecoration: "none", color: 'white' }}>Reports</Link></span>
+                <span><Link to="/home/reports" style={{ textDecoration: "none", color: 'white' }}>Reports</Link></span>
               </li>
-            </Link>
+          
             <li>
               <Table className="icon" />
-              <span><Link to="/tables" style={{ textDecoration: "none", color: 'white' }}>Tables</Link></span>
+              <span><Link to="/home/tables" style={{ textDecoration: "none", color: 'white' }}>Tables</Link></span>
             </li>
             <li>
               <PieChartFill className="icon" />
-              <span><Link to="/charts" style={{ textDecoration: "none", color: 'white' }}>Charts</Link></span>
+              <span><Link to="/home/charts" style={{ textDecoration: "none", color: 'white' }}>Charts</Link></span>
             </li>
             <li>
               <PersonCircle className="icon" />
-              <span><Link to="/userpages" style={{ textDecoration: "none", color: 'white' }}>Userpages</Link></span>  
+              <span><Link to="/home/userpages" style={{ textDecoration: "none", color: 'white' }}>Userpages</Link></span>  
           </li>
           <li>
             <BagHeart className="icon" />
-            <span><Link to="/icons" style={{ textDecoration: "none", color: 'white' }}>Icons</Link></span>
+            <span><Link to="/home/icons" style={{ textDecoration: "none", color: 'white' }}>Icons</Link></span>
           </li>
         </ul>
       </div>

@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 export function Forgotpassword() {
     const Navigate = useNavigate();
+    const [email, setEmail] = useState('');
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
@@ -43,6 +44,7 @@ export function Forgotpassword() {
                                                        message: 'Invalid email address'
                                                    }
                                                })}
+                                               onChange={e => setEmail(e.target.value)}
                                         />
                                         {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
                                     </div>
@@ -56,38 +58,5 @@ export function Forgotpassword() {
                 </div>
             </div>
         </div>
-    );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+);   }
+                                        
