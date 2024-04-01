@@ -30,6 +30,7 @@ export function AppRouter(){
             <Route path='/signup' element={<Signup></Signup>}></Route>
             <Route path='/fileuploader' element={<FileUploader></FileUploader>}></Route>
               <Route path='/' element={<Login></Login>}></Route>   
+            <Route path='/' element={<Login></Login>}></Route>   
             <Route path='/signup' element={<Signup></Signup>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path="/forgotpass" element={<Forgotpassword></Forgotpassword>}></Route>
@@ -42,8 +43,7 @@ export function AppRouter(){
                 <Route path='tables' element={<Tables></Tables>}></Route>
                 <Route path='charts' element={<Charts></Charts>}></Route>
                 <Route path='icons'element={<Icons></Icons>}></Route>
-                <Route path='userpages' element={<Userpages></Userpages>}></Route>
-                
+                <Route path='userpages' element={<Userpages></Userpages>}></Route>   
             </Route>
            
                    
