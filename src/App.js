@@ -13,6 +13,16 @@ import { AppRouter } from './appRouter.js';
 // import AwsS3UploaderMultiplefiles from './components/Awss3bucket/multiplefiles.js';
 import { HomeRouter } from './homerouter.js';
 // import { ToastContainer,toast } from 'react-toastify';
+import { BrowserRouter } from 'react-router-dom';
+import {AppRouter } from './appRouter';
+import { ToastContainer } from 'react-toastify';
+//import FileUploader from './components/Awss3Buckets/fileuploader';
+//import AwsS3Retrieve from './components/Awss3Buckets/fileretrive';
+//import AwsS3UploaderMultiplefiles from './components/Awss3Buckets/multiplefiles';
+//import {Dashboard } from './components/dashboard.component';
+//import Report from './components/Pages/reports/reports';
+//import { SampleReports } from './components/Pages/reports/samplereport';
+//import { SampleReportsData } from './components/Pages/reports/samplereportsdata';
 
 function App() {
   const { ToastContainer } = require('react-toastify');
@@ -32,6 +42,16 @@ function App() {
       <AppRouter>
       </AppRouter> 
       <ToastContainer theme='light'></ToastContainer>
+    <ToastContainer theme='dark'></ToastContainer>
+    {/* <Dashboard></Dashboard>*/}
+    <AppRouter></AppRouter>
+     {/* <Report></Report> */}
+     {/* < FileUploader></FileUploader>  */}
+     {/* <AwsS3Retrieve></AwsS3Retrieve> */}
+     {/* <SampleReports></SampleReports> */}
+      {/* <SampleReportsData></SampleReportsData> */}
+    {/* <AwsS3UploaderMultiplefiles></AwsS3UploaderMultiplefiles> */}
+
     </BrowserRouter>
   );
 }

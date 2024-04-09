@@ -20,6 +20,7 @@ import {Icons} from './components/Pages/icons/icons.jsx';
 import {Userpages} from './components/Pages/userpages/userpages.jsx';
 
 import  Home from './components/Home/home.jsx';
+//import FileUploader from './components/Awss3Buckets/fileuploader';
 
 export function AppRouter(){
     return(
@@ -48,6 +49,7 @@ export function AppRouter(){
            
                    
            
+            {/* <Route path='/fileuploader' element={<FileUploader></FileUploader>}></Route> */}
         </Routes>
     )
 }
