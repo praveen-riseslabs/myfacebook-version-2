@@ -12,6 +12,7 @@ import { AppRouter } from './appRouter.js';
 // import AwsS3Retrieve from './components/Awss3bucket/retrieve.js';
 // import AwsS3UploaderMultiplefiles from './components/Awss3bucket/multiplefiles.js';
 import { HomeRouter } from './homerouter.js';
+import { Documents } from './components/Pages/documents/documents.jsx';
 // import { ToastContainer,toast } from 'react-toastify';
 
 function App() {
@@ -25,12 +26,11 @@ function App() {
       {/* <AwsS3Uploader></AwsS3Uploader>    */}
       {/* <AwsS3Retrieve></AwsS3Retrieve> */}
       {/* <AwsS3UploaderMultiplefiles></AwsS3UploaderMultiplefiles>  */}
-
       {/* <Home></Home> */}
       {/* <Login></Login> */}
       {/* <Signup/>   */}
-      <AppRouter>
-      </AppRouter> 
+       <AppRouter></AppRouter>  
+      {/* <Documents></Documents> */}
       <ToastContainer theme='light'></ToastContainer>
     </BrowserRouter>
   );

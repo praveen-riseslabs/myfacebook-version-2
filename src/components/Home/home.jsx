@@ -28,12 +28,10 @@ import { Outlet } from 'react-router-dom';
         </div>
         <div className="col-md-9">
          <div className="content">
-         <Outlet />
-           <AppRouter></AppRouter> 
+            <Outlet />
           </div> 
         </div>
       </div>
-      <Outlet />
     </div>
   );
 }

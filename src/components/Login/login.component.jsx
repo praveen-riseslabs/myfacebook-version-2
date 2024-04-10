@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export function Login() {
-    const Navigate = useNavigate();
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -20,7 +19,7 @@ export function Login() {
                 if (res.status === 200) {
                     toast.success("Login successful");
                     localStorage.setItem("userinfo", JSON.stringify(res.data));
-                    Navigate('/forgotpass');
+                    navigate('/home');
                 } else {
                     toast.error("Login failed");
                 }
