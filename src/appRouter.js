@@ -14,14 +14,12 @@ import {Userpages} from './components/Pages/userpages/userpages.jsx';
 
 import  Home from './components/Home/home.jsx';
 import { GetDocuments } from './components/Pages/documents/viewdocuments.jsx';
+//import FileUploader from './components/Awss3Buckets/fileuploader';
 
 export function AppRouter(){
     return(
         <Routes>
-<<<<<<< Updated upstream
              
-=======
->>>>>>> Stashed changes
             <Route path='/' element={<Login></Login>}></Route>   
             <Route path='/signup' element={<Signup></Signup>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
@@ -41,6 +39,7 @@ export function AppRouter(){
            
                    
            
+            {/* <Route path='/fileuploader' element={<FileUploader></FileUploader>}></Route> */}
         </Routes>
     )
 }
