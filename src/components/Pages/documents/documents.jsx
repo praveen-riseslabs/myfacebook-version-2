@@ -24,6 +24,7 @@ export function Documents() {
     navigate("/viewdocuments"); 
   }
 
+<<<<<<< Updated upstream
   return (
     <div className='container mt-5'>
       <div className='row card1'>
@@ -64,4 +65,16 @@ export function Documents() {
     </div >
     </div >
   );
+=======
+export function Documents(){
+    return(
+        <div>
+            <div className="document">
+                <label>Name :</label>
+                <input type="text" id="title" className="form-control" placeholder="Name  your Document"></input>
+                    
+            </div>
+        </div>
+    )
+>>>>>>> Stashed changes
 }
