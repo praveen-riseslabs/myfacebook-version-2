@@ -11,10 +11,9 @@ import {Tables} from './components/Pages/tables/tables.jsx';
 import {Charts} from './components/Pages/charts/charts.jsx';
 import {Icons} from './components/Pages/icons/icons.jsx';
 import {Userpages} from './components/Pages/userpages/userpages.jsx';
-
 import  Home from './components/Home/home.jsx';
 import { GetDocuments } from './components/Pages/documents/viewdocuments.jsx';
-//import FileUploader from './components/Awss3Buckets/fileuploader';
+
 
 export function AppRouter(){
     return(
