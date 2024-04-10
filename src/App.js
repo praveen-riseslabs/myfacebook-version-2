@@ -35,8 +35,6 @@ function App() {
        <AppRouter></AppRouter>  
       {/* <Documents></Documents> */}
       <ToastContainer theme='light'></ToastContainer>
-   
-
     </BrowserRouter>
   );
 }
