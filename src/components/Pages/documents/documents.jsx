@@ -27,31 +27,31 @@ export function Documents() {
   return (
     <div className='container mt-5'>
       <div className='row card1'>
-        <div className='col-sm-6 card-body1' >
+        <div className='col-sm-6 card-body1'>
           <h3 className="card-title1">Upload Documents</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className='form-group row'>
               <label className='col-sm-3'>Title :</label>
               <div className='col-sm-9'>
-                <input type='text' className='form-control ' id='title' placeholder='Give title to document'></input>
+                <input type='text' className='form-control ' id='title' placeholder='Give title to document'  onChange={e => setTitle(e.target.value)}></input>
               </div>
             </div>
             <div className='form-group row'>
               <label className='col-sm-3'>Name :</label>
               <div className='col-sm-9'>
-                <input type='text' className='form-control ' id='name' placeholder='Give name of person'></input>
+                <input type='text' className='form-control ' id='name' placeholder='Give name of person' onChange={e => setName(e.target.value)}></input>
               </div>
             </div>
             <div className='form-group row'>
               <label type="fileInput" className='col-sm-3'>Choose File :</label>
               <div className='col-sm-9'>
-                <input type="file" className="form-control-file" id="fileInput" />
+                <input type="file" className="form-control-file" id="fileInput"  onChange={e => setFile(e.target.value)} />
               </div>
             </div>
             <div className='form-group row'>
               <label className='col-sm-3'>Description :</label>
               <div className='col-sm-9'>
-                <textarea rows='3' className='form-control ' id='title' placeholder='Give somedescription about document'></textarea>
+                <textarea rows='3' className='form-control ' id='title' placeholder='Give somedescription about document' onChange={e => setDescription(e.target.value)}></textarea>
               </div>
             </div>
             <div className='p-9'>
