@@ -19,10 +19,7 @@ import { GetDocuments } from './components/Pages/documents/viewdocuments.jsx';
 export function AppRouter(){
     return(
         <Routes>
-<<<<<<< Updated upstream
              
-=======
->>>>>>> Stashed changes
             <Route path='/' element={<Login></Login>}></Route>   
             <Route path='/signup' element={<Signup></Signup>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
@@ -39,10 +36,6 @@ export function AppRouter(){
                 <Route path='icons'element={<Icons></Icons>}></Route>
                 <Route path='userpages' element={<Userpages></Userpages>}></Route>   
             </Route>
-           
-                   
-           
-            {/* <Route path='/fileuploader' element={<FileUploader></FileUploader>}></Route> */}
         </Routes>
     )
 }

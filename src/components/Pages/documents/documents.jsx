@@ -24,7 +24,6 @@ export function Documents() {
     navigate("/viewdocuments"); 
   }
 
-<<<<<<< Updated upstream
   return (
     <div className='container mt-5'>
       <div className='row card1'>
@@ -66,7 +65,6 @@ export function Documents() {
     </div >
   );
   }
-=======
 export function Documents(){
     return(
         <div>
@@ -78,4 +76,3 @@ export function Documents(){
         </div>
     )
 }
->>>>>>> Stashed changes
