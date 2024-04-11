@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'; 
+export function Reports(){
 
-export function Report(){
     return(
       <div className="container"style={{ border: '1px solid black', padding: '50px' }}>
             <h3 style={{color: "red"}}className='text-center'>My Health Record</h3>
@@ -100,7 +100,7 @@ export function Report(){
         </div>
     )
 }
-export default Report;
+ export default Reports;
 
 
 // import React from 'react';

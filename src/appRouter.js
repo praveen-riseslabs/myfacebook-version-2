@@ -6,7 +6,8 @@ import { Signup } from './components/registrationpage/signup';
 import { Login } from './components/Login/login.component.jsx';
 import {Dashboard} from './components/Pages/dashboard/dashboard.jsx';
 import { Documents } from './components/Pages/documents/documents.jsx';
-import { Reports } from './components/Pages/reports/reports.jsx';
+ import Reports  from './components/Pages/reports/reports.jsx';
+
 import {Tables} from './components/Pages/tables/tables.jsx';
 import {Charts} from './components/Pages/charts/charts.jsx';
 import {Icons} from './components/Pages/icons/icons.jsx';

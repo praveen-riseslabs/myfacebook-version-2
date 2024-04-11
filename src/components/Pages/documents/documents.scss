@@ -1,6 +1,6 @@
 .card1{
     height: 75vh;
-    background-color: aquamarine;
+    background-color: rgb(254, 255, 255);
     font-size: medium;
     font-weight: bolder;
     .card-body1 div{
@@ -12,7 +12,10 @@
     }
 
 .card-title1{
-    text-align: center;
+     text-align:center!important;
+    
     color: blue;
+    padding: 15px;
+    font-weight: bold;
 }
 }

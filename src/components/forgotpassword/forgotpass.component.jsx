@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from 'react';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom'
 import './forgotpass.component.scss'
@@ -36,7 +35,7 @@ export function Forgotpassword() {
                                 <h3 className="card-title text-right">My Facebook 2</h3>
                                 <h6 className="card-text text-right">Hello! Let's get started</h6>
                                 <p className="card-text text-right">Forgot password to continue.</p>
-                                <form onSubmit={handleSubmit(onSubmit)}>
+                                <form>
                                     <div className="form-group mt-4">
                                         <input type="email"
                                                className={`form-control ${errors.email ? 'is-invalid' : ''}`}

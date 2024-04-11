@@ -16,7 +16,7 @@ export function GetDocuments(){
       }, [])
       return(
         <div>
-            <table>
+            <table className="table table-primary table-striped table-hover">
                 <thead>
                     <tr>
                     <td> Title</td>

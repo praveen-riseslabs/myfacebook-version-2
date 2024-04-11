@@ -10,8 +10,11 @@ export function Documents() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [file, setFile] = useState(null);
+
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
+  
+
   const onSubmit = () => {
 
     const data = {
@@ -25,10 +28,10 @@ export function Documents() {
   }
 
   return (
-    <div className='container mt-5'>
-      <div className='row card1'>
-        <div className='col-sm-6 card-body1'>
-          <h3 className="card-title1">Upload Documents</h3>
+    <div className='container mt-4'>
+      <div className='row card1 '>
+        <div className='col-sm-6 card-body1 ms-5'>
+          <h3 className="card-title1"> Upload Documents</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className='form-group row'>
               <label className='col-sm-3'>Title :</label>
@@ -65,14 +68,4 @@ export function Documents() {
     </div >
   );
   }
-export function Documents(){
-    return(
-        <div>
-            <div className="document">
-                <label>Name :</label>
-                <input type="text" id="title" className="form-control" placeholder="Name  your Document"></input>
-                    
-            </div>
-        </div>
-    )
-}
+

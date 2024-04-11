@@ -17,7 +17,7 @@
     &.collapsed {
       width: 60px;
     }
-    
+   
 
     .top {
       height: 50px;
@@ -71,12 +71,13 @@
           padding: 12px;
           cursor: pointer;
           transition: background-color 0.3s;
-    
-  
+          position: relative;
+         
+       
           &:hover {
             background-color: #1d1b27;
           }
-  
+         
           .icon {
             font-size: 20px;
             color: #edebf5;
@@ -89,8 +90,9 @@
               margin-left: 10px;
               text-decoration: none;
           }
-        
-        }
+          
+      }
+
       }
     }
   

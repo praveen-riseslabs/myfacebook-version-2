@@ -12,10 +12,9 @@ import { AppRouter } from './appRouter.js';
 // import AwsS3Retrieve from './components/Awss3bucket/retrieve.js';
 // import AwsS3UploaderMultiplefiles from './components/Awss3bucket/multiplefiles.js';
 import { HomeRouter } from './homerouter.js';
-import { Documents } from './components/Pages/documents/documents.jsx';
+// import { Documents } from './components/Pages/documents/documents.jsx';
 // import { ToastContainer,toast } from 'react-toastify';
-import { BrowserRouter } from 'react-router-dom';
-import {AppRouter } from './appRouter';
+
 import { ToastContainer } from 'react-toastify';
 
 function App() {
